@@ -3,7 +3,7 @@
 <h1>Coupons</h1>
 <ul>
   <% @coupons.each do |p| %>
-    <li><%= p.title %> - <%= p.description %></li>
+    <li><%= p.coupon_code %> - <%= p.store %></li>
   <% end %>
 </ul>
 
