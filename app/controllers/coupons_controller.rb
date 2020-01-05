@@ -14,13 +14,14 @@ class CouponsController < ApplicationController
   end 
 
   def create 
-    Coupon.create(coupon: params[:coupon_code], coupon: params[:store])
+    @coupon= Coupon.create(coupons_params)
     redirect_to coupon_path(@coupon)
   end 
 end
 
-#strong 
-#private 
-#def coupons_params 
-# params.require(:coupon).permit(:coupon_code, :store)
+# strong 
+private 
+def coupons_params 
+params.require(:coupon).permit(:coupon_code, :store)
+end 
 #this is a way to sanitize the params and need to be put in a priviate
